@@ -1,0 +1,260 @@
+
+@charset "UTF-8";
+
+body{
+
+    /*どの書式にするかを設定、優先順位は前から*/
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'sans-serif';
+    /*文字のサイズ*/
+    font-size: 15px;
+
+}
+
+.hed {
+    font-style: italic;
+    font-size: 35px;
+    position: absolute;
+    padding: 30px;
+    left: 0;
+    color: #fff;
+}
+
+.hed_2 {
+    font-style: normal;
+    font-size: 20px;
+    position: absolute;
+    left: 30;
+    color: #fff;
+}
+
+.top {
+    margin: 1% auto;
+    font-weight: bold;
+    position: absolute;
+    padding:  20px;
+    right:  50px;
+    color:#fff;
+}
+
+/*横並び*/
+.header ul {
+    display: flex;
+}
+/*分割*/
+.header ul li {
+    width: 150px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+/*.header ul liの初めのやつを指示できる*/
+.header ul li:first-child{
+    /*1px solidで線の太さ*/
+    border-left: 1px solid #ddd;
+}
+
+.header ul li a {
+    display: block;
+}
+
+.w_inner {
+    width: 1200px;
+    /*位置を中央よせ*/
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+/*スライドショー設定*/
+.hero-slide__img {
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: slideAnime;
+    animation-timing-function: ease;
+    display: block;
+    min-height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    width: 100%;
+  }
+
+  .hero-slide__item:nth-of-type(1) .hero-slide__img {
+    animation-delay: 0s;
+  }
+  
+  .hero-slide__item:nth-of-type(2) .hero-slide__img {
+    animation-delay: 5s;
+  }
+  
+  .hero-slide__item:nth-of-type(3) .hero-slide__img {
+    animation-delay: 10s;
+  }
+  
+  @keyframes slideAnime {
+    0% {
+      opacity: 0;
+    }
+  
+    16% {
+      opacity: 1;
+    }
+  
+    33% {
+      opacity: 1;
+    }
+  
+    49% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
+  }
+  
+  .hero {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hero__inner {
+    margin: 0 auto;
+    width: 1100px;
+  }
+
+  .hero__title {
+    font-size: 50px;
+    /*文字の太さを指定*/
+    font-weight: bold;
+    /*配置方法を指定*/
+    position: absolute;
+    text-align: left;
+    top: 45%;
+    /*中央よせ*/
+    transform: translate(-10%, -50%);
+    width: 100%;
+    /*文字の色を指定*/
+    color : #fff;
+  }
+
+  .hed_3 {
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    color : #fff;
+}
+  
+  .hero-slide__item {
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    right: -10%;
+    width: 110%;
+  }
+
+  /*スライドショー設定ここまで*/
+
+.list {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.container_service .service_block {
+    display: flex;
+    /*スペースに対して均等に割り振る*/
+    justify-content: space-between;
+}
+
+.container_service .service {
+    width: 380px;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container_service h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container_service .service img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 200px;
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+.container_service .service:hover img {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.img-text {
+    top:  0;
+    left: 0;
+    font-size: 20px;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.container_service .service .ttl {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container_service .service .explain {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.under {
+    background-color: black;
+    min-height: 25vh;
+    width: 100%;
+}
+
+.under a {
+    color: white;
+    font-size: 15px;
+    margin: 0.5% auto 0.1% auto;
+    font-weight: bold;
+    padding:  20px;
+}
+
+.wrap {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-around;
+}
+
+.under .wrap .moji {
+    display: inline-block;
+    font-weight: thin;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+}
+
+.moji:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  content: "";
+}
+.moji:hover:after {
+  transform: translate(0, 0);
+}

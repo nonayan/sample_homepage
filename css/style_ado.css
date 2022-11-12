@@ -1,0 +1,11 @@
+
+@charset "UTF-8";
+
+.size {
+    width: 1200px;
+    height: 300px;
+}
+
+.size .img {
+    width:100vw;
+}

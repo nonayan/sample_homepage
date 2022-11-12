@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+body{
+
+    /*どの書式にするかを設定、優先順位は前から*/
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'sans-serif';
+    /*文字のサイズ*/
+    font-size: 15px;
+
+}
+
+/*トップ写真のアニメーション設定*/
+.wrap {
+	animation: fadein 5s forwards;
+    position: relative;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+/*写真の幅100%*/
+.picture img {
+    width: 100%;
+    position: absolute;
+}
+/*写真上の文字の制限*/
+.picture .moji {
+    font-style:italic;
+    font-size: 90px;
+    position: absolute;
+    font-weight: bold;
+    top: 20%;
+    left: 25%;
+    color: white;
+}
+
+.block {
+    /*写真を並列に*/
+    display: flex;
+    /*同じ幅で分割*/
+    justify-content: space-between;
+}
+
+.list {
+    width: 4000px;
+    text-align: left;
+    /*はみ出た部分を表示できないようにする*/
+    overflow: hidden;
+}
+
+.picture .block .list img {
+    padding: 0.8%;
+    /*写真の大きさを設定*/
+    height: 250px;
+    width: 480px;
+    bottom: 100px;
+    left: 1000;
+}
+
+.absolute {
+    position: absolute;
+    animation: fadein 10s forwards;
+}
+
+.picture .block .list .ttl {
+    padding: 0.8%;
+    position: absolute;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 75px;
+    color: white
+}
+
+.picture .block .list .explain {
+    padding: 0.8%;
+    position: absolute;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    bottom: 30px;
+    color: whitesmoke
+}
+  

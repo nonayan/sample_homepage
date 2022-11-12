@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/****** Base style. ******/
+body {
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.flexbox img{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+/*画像表示アニメーション*/
+.img-wrap {
+    animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1);
+    position: relative;
+    
+}
+  
+@keyframes img-wrap {
+    0% {
+      clip-path: circle(0 at 50% 50%);
+      -webkit-clip-path: circle(0 at 50% 50%);
+    }
+  
+    100% {
+      clip-path: circle(100% at 50% 50%);
+      -webkit-clip-path: circle(100% at 50% 50%);
+    }
+}
+  
+.title {
+    position:absolute;
+    display: flex;
+    overflow: hidden;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: -550px;
+    margin-left: 100px;
+}
+
+.title span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  transition-delay: 0s;
+}
+
+.title.-visible span {
+  transform: translate(0, 0);
+}
+
+.title span:nth-child(2) {
+  transition-delay: 0.01s;
+}
+.title span:nth-child(3) {
+  transition-delay: 0.07s;
+}
+.title span:nth-child(4) {
+  transition-delay: 0.13s;
+}
+.title span:nth-child(5) {
+  transition-delay: 0.19s;
+}
+.title span:nth-child(6) {
+  transition-delay: 0.25s;
+}
+.title span:nth-child(7) {
+  transition-delay: 0.31s;
+}
+.title span:nth-child(8) {
+  transition-delay: 0.37s;
+}
